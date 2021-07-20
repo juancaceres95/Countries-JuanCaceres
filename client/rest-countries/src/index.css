@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  background-color: hsl(207, 26%, 17%);
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid hsl(207, 26%, 17%);
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: hsl(207, 26%, 17%);
+}
+.btn-light {
+  background-color: hsl(209, 23%, 22%);
+  border: 2px solid hsl(209, 23%, 22%);
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  /* padding: 20px; */
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+
+.header,
+.form,
+.countries {
+  padding: 10px 50px;
+}
+
+/*------Header-----*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b3743;
+}
+.header i {
+  cursor: pointer;
+}
+/*------- Filter Form--------*/
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+}
+.form input,
+.form select {
+  background-color: hsl(209, 23%, 22%);
+  padding: 12px;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.form input::placeholder {
+  color: #fff;
+}
+
+/*------Grid tablas Countries-----*/
+.countries {
+  padding: 0 50px 50px;
+}
+
+.countries .flag img {
+  border-radius: 5px 5px 0 0;
+  /* height: 250px; */
+}
+
+.countries .details {
+  background-color: #2b3743;
+  padding: 20px;
+  margin: -10px 0 30px;
+  border-radius: 0 0 5px 5px;
+}
+
+.countries .details h4 {
+  margin: 10px 0;
+}
+.countries .details h4 span {
+  font-weight: 300;
+}
+
+@media (min-width: 640px) {
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .countries .details {
+    margin: -10px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .countries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1366px) {
+  .countries {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .form input {
+    width: 90vw;
+    margin-bottom: 20px;
+  }
+
+  .form .select select {
+    width: 50vw;
+  }
+}
